@@ -1,8 +1,10 @@
 var bird;
 var pipes = [];
 var frameCount = 100;
+var screenWidth = document.documentElement.clientWidth;
+var screenHeight = document.documentElement.clientHeight;
 function setup() {
-    createCanvas(400,600)
+    createCanvas(screenWidth,screenHeight)
     bird = new Bird();
 
     pipes.push(new Pipe()); 
@@ -29,10 +31,12 @@ function draw() {
 
     if (frameCount % 100 == 0) {    
         pipes.push(new Pipe());
-    }
-
-   
+    }   
 }
+
+function mouseClicked() { 
+    bird.up(); 
+} 
 
 function keyPressed() {
     if(key == ' ') {
