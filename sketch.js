@@ -34,6 +34,10 @@ function draw() {
     }   
 }
 
+function touchStarted() { 
+    bird.up(); 
+} 
+
 function mouseClicked() { 
     bird.up(); 
 } 
